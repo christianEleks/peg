@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-Ni">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We are a main organization in Nigeria and work in Imo state for disinfection and cleanliness. Anything that makes your current circumstance and you perfect, slick and clean is our task.">
+    <meta name="keywords" content="Cleaning services, House works, Mopping and dusting, Cutting grasses, Weeding, Washing">
+    <meta name="author" content="Leopeige Cleaning">
+    <title>Services</title>
+    <link rel="icon" type="image/x-icon" href="../Favicon/favicon.ico">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/a6e25eb83d.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+     body{
+        font-family: 'Poppins', sans-serif;  
+     }
+     body, html{
+      overflow-x: hidden;
+     }
+     .loader{
+      position: fixed;
+      top:0;
+      left:0;
+      width:100vw;
+      height:100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color:whitesmoke;
+      z-index: 9999999;
+     }
+     .loader-active{
+      display: flex;
+     }
+     .loader::after{
+      content:"";
+      width:70px;
+      height: 70px;
+      background:rgb(241, 147, 24);
+      animation: loader 0.5s infinite;
+      animation-direction: alternate;
+     }
+    
+     @keyframes loader{
+      from{
+         transform: translateY(-50px) scale(0.5);
+         border-radius: 50%;
+      }
+      to{
+         transform: translateY(50px) scale(1);
+         border-radius:0%;
+      }
+     }
+     header{
+        width:100vw;
+        height:100vh;
+        background:rgba(0,0,0,0.7) url(../Image/pan.jpg);
+        background-size:cover;
+        background-position:center;
+        background-blend-mode:darken;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .beau{
+       margin-bottom: 150px;
+       text-align: center;
+       color: white; 
+     }
+     .beau h1{
+        font-size: 8vmin;
+        padding-top: 150px;
+     }
+     .bea{
+        width:150px;
+        height:4px;
+        background-color:rgb(241, 147, 24);
+        margin:10px auto;
+        border-radius: 5px;
+     }
+     .beau h2{
+        font-size: 4vmin;
+        margin-top: 30px;
+        margin-bottom: 40px;
+     }
+     ul{
+        list-style-type: none;
+     }
+     .navbar{
+       position: absolute;
+       top:0;
+       left:0;
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+       color: white;
+       padding: 20px;
+     }
+     #nav-link{
+      display: flex;
+      align-items: center;  
+     }
+     #nav-link li{
+        margin:0 30px;
+     }
+     #nav-link a{
+       color:white;
+       font-weight: bold;
+       text-decoration: none; 
+     }
+     #nav-link li a:hover{
+      color:rgb(241, 147, 24);
+      transition:.4s;
+     }
+     .bag{
+        background-color: rgb(241, 147, 24);
+        border:2px solid transparent;
+        padding:9px 25px;
+        border-radius: 30px;
+        transition:transform .4s;
+     }
+     .bag:hover{
+        transform:scale(1.2);
+     }
+     .menu-btn{
+        position: absolute;
+        top:40px;
+        right:40px;
+        width:40px;
+        cursor: pointer;
+        display: none;
+     }
+     .bet{
+      text-align: center;
+     }
+     .row1{
+      display: flex;
+     }
+     .man{
+      width: 45%;
+     }
+     .men{
+      width: 55%;
+      padding-top: 40px;
+     }
+     .reveal{
+      opacity:0;
+      transition: all 2s ease;
+     }
+     .reveal.active{
+      opacity:1;
+     }
+.row4{
+    height:45vh;
+    width:100vw;
+    background-color: #F3F4F5;
+    display: flex;
+    align-items: center;
+}
+.footer{
+    padding-top:20px;
+}
+.footer2{
+    padding-top:20px;  
+}
+.footer2 ul{
+    margin-inline:1cm;
+}
+.footer2 ul a{
+    color:black;
+    cursor:pointer;
+    text-decoration: none;
+}
+.footer2 ul a:hover{
+    color:rgb(241, 147, 24);
+    transition:.4s;
+}
+.black{
+    display: flex;
+}
+p{
+   font-size: 15px;
+   font-weight:lighter;
+   text-align:center;
+ }
+     @media only screen and (max-width:850px){
+      .navbar{
+        padding: 0;
+      }
+      .menu-btn{
+        display: block;
+      }
+      .belt{
+        position: absolute;
+        top:40px;
+        left:30px;
+      }
+      #nav-link{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(179, 153, 120);
+        justify-content: center;
+        margin-top: -1200px;
+        transition: all 0.5s ease;
+      }
+      #nav-link li{
+        margin:30px auto;
+      }
+     }
+
+     @media only screen and (max-width:850px){
+      .row1{
+         display:block;
+      }
+      .man{
+         display:block;
+         flex-direction: column;
+         width:100%;
+         justify-content: center;
+         align-items: center;
+      }
+      .men{
+         width:100%;
+      }
+      #bag{
+         display: flex;
+         flex-direction: column-reverse;
+      }
+     }
+     @media only screen and (max-width:320px){
+    .belt{
+        left:8px;
+    }
+    .menu-btn{
+        right:5px;
+    }
+}
+@media only screen and (max-width:600px){
+    .row4{
+      display:block;
+      height:70vh;
+    }
+    .footer{
+        margin-inline:1cm;
+    }
+}
+@media only screen and (max-width:1024px){
+  .row4{
+      height:25vh;
+    }
+}
+@media only screen and (max-width:600px){
+.row4{
+      height:50vh;
+    }
+}
+@media only screen and (max-width:550px){
+.row4{
+      height:70vh;
+    }
+}
+@media only screen and (max-width:480px){
+  .row4{
+      height:95vh;
+    }
+}
+@media only screen and (max-width:470px){
+  .row4{
+      height:70vh;
+    }
+}
+@media only screen and (max-width:360px){
+.row4{
+      height:80vh;
+    }
+}
+@media only screen and (max-width:1024px) and (max-height:600px){
+  .row4{
+      height:45vh;
+    }
+}
+@media only screen and (max-width:320px) and (max-height:533px){
+  .row4{
+      height:100vh;
+    }
+}
+@media only screen and (max-width:1280px){
+  .man{
+   width:100%;
+   display:flex;
+  } 
+  .men{
+   width:100%;
+  }
+}
+@media only screen and (max-width:1024px){
+  p{
+    margin-inline: 0.4cm;
+  }
+}
+@media only screen and (max-width:900px){
+    .row4{
+     display: block;
+     height: 55vh;
+    }
+    .footer{
+        margin-inline:1cm;
+    }
+    .my{
+        margin-top: 90px;
+    }
+ }
+ @media only screen and (max-width:550px){
+    .row4{
+        height: 75vh;
+       }
+ }
+ @media only screen and (max-width:393px){
+    .row4{
+        height: 95vh;
+       }
+ }
+ @media only screen and (max-width:375px){
+    .row4{
+        height: 80vh;
+       }
+ }
+ @media only screen and (max-width:360px){
+    .row4{
+        height: 84vh;
+       }
+ }
+ @media only screen and (max-width:320px){
+    .row4{
+        height: 102vh;
+       }
+ }
+  </style>
+</head>
+<body onload="Load()">
+   <div class="loader loader-active"></div>
+    <nav class="navbar">
+       <h2 class="belt">Leopeige<span  style="color:rgb(241, 147, 24);"> Cleaning</span></h2>
+       <ul id="nav-link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <a class="bag" href="Book.html">Book</a>
+       </ul>
+       <img src="../Image/down .png" class="menu-btn" onclick="menu()"/>
+    </nav>
+
+   <header>
+    <div class="beau">
+        <h1>Services</h1>
+        <div class="bea"></div>
+        <h2>Enlist an expert cleaning administration like Leopeige Cleaning <br> to take a portion of the weights off you</h2>
+    </div>
+   </header> <br> <br>
+   
+   <div class="bet reveal">
+      <h1 style="color: rgb(241, 147, 24)">Our Services</h1>
+      <p style="color:rgb(57, 57, 117)">We ensure you have a healthy, clean and safe environment</p>
+   </div> <br>
+
+   <section1>
+      <div class="row1 reveal">
+       <div class="man">
+         <img src="../Image/leo5.jpg" width="300px">
+         <img src="../Image/leo2.jpg" width="300px">
+       </div>
+
+       <div class="men reveal">
+         <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">One Time Cleaning</h1>
+         <p style="color:rgb(57, 57, 117); ">Leopeige cleaning is happy to help you out if you simply need someone to do a 
+            fantastic cleaning before guests arrive or after a large family gathering. Get a deep, one-time clean that is great for post-construction clean up, before a new product launch, or perhaps a special event cleaning.</p>
+       </div>
+      </div>
+
+      <div class="row1 reveal" id="bag">
+         <div class="men reveal">
+            <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">Recurring Cleaning</h1>
+            <p style="color:rgb(57, 57, 117);">Living in a clean environment improves the quality of life. A spotless, fragrant environment
+               promotes productivity and a sense of calm, whether it be at home or at work. We have you covered
+               with your choice of weekly, biweekly, or monthly cleaning, tailored to fit your lifestyle and budget,
+               so don't worry if you don't have the time.</p>
+          </div>
+  
+          <div class="man">
+            <img src="../Image/leo1.jpg" width="300px">
+            <img src="../Image/leo6.jpg" width="300px">
+          </div>
+        </div>
+        
+        <div class="row1 reveal">
+         <div class="man">
+           <img src="../Image/leo3.jpg" width="300px">
+           <img src="../Image/leo7.jpg" width="300px">
+         </div>
+  
+         <div class="men reveal">
+           <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">Office Cleaning</h1>
+           <p style="color:rgb(57, 57, 117);">Being in business ourselves, we are aware of the significance a client's first impression can have.
+            You can rely on us to make sure that your office is immaculate and that your customers only notice 
+            a clean, fresh environment when they enter.</p>
+         </div>
+        </div>
+
+        <div class="row1 reveal" id="bag">
+         <div class="men reveal">
+            <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">Move-in Cleaning</h1>
+            <p style="color:rgb(57, 57, 117);">You can concentrate on moving and let us concentrate on making your home or office sparkling
+               clean since moving has enough challenges without worrying about whether the place is clean enough as well!</p>
+          </div>
+  
+          <div class="man">
+            <img src="../Image/leo8.jpg" width="300px">
+            <img src="../Image/leo4.jpg" width="300px">
+          </div>
+        </div>
+
+        <div class="row1 reveal">
+         <div class="man">
+           <img src="../Image/leo10.png" width="300px">
+           <img src="../Image/leo9.png" width="300px">
+         </div>
+  
+         <div class="men reveal">
+           <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">Window Cleaning</h1>
+           <p style="color:rgb(57, 57, 117);">Windows let you see more of the world than just what is outside, and they also let in sunlight and warmth. Our team cleans all of your windows inside and out, regardless of how many you have or how frequently you need them cleaned.</p>
+         </div>
+        </div>
+
+        <div class="row1 reveal" id="bag">
+         <div class="men reveal">
+            <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">Carpet Cleaning</h1>
+            <p style="color:rgb(57, 57, 117);">Our team is constantly looking for ways to expand our knowledge, improve our techniques, and extend our qualifications. Your carpets receive individual care, just like our customers. Home or office, we will give your carpets the attention they need and you deserve. </p>
+          </div>
+  
+          <div class="man">
+            <img src="../Image/leo11.png" width="300px">
+            <img src="../Image/leo12.png" width="300px">
+          </div>
+        </div>
+
+        <div class="row1 reveal">
+         <div class="man">
+           <img src="../Image/leo13.png" width="300px">
+           <img src="../Image/leo14.png" width="300px">
+         </div>
+  
+         <div class="men reveal">
+           <h1 style="color: rgb(241, 147, 24); text-align: center;padding-bottom: 10px;">Deep Cleaning</h1>
+           <p style="color:rgb(57, 57, 117);">Let us get rid of dirt and even offensive odors from those difficult-to-reach areas of your home. With our deep clean, your house will have that finishing touch and be spotless before we leave!</p>
+         </div>
+        </div>
+   </section1><br>
+
+   <section4>
+      <div class="row4">
+      <div class="footer2 reveal">
+       <h3 style="color:rgb(241, 147, 24); margin-inline: 1cm;">Services</h3>
+       <ul>
+         <li><a href="service.html">One-time cleaning</a></li>
+         <li><a href="service.html">Office cleaning</a></li>
+         <li><a href="service.html">Recurring cleaning</a></li>
+         <li><a href="service.html">Move-in cleaning</a></li>
+       </ul>
+      </div>
+
+      <div class="footer2 reveal">
+       <h3 style="color:rgb(241, 147, 24); margin-inline: 1cm;">Other services</h3>
+       <ul>
+         <li><a href="service.html">Window cleaning</a></li>
+         <li><a href="service.html">Carpet cleaning</a></li>
+         <li><a href="service.html">Deep cleaning</a></li>
+         <li><a href="Book.html">Car cleaning</a></li>
+       </ul>
+      </div>
+
+      <div class="footer reveal">
+       <h3 style="color:rgb(241, 147, 24);">Contact us</h3>
+       <div class="black">
+         <i class="fa-solid fa-location-dot"></i>
+         <p style="margin-left: 16px;">Imo state Nigeria</p>
+       </div>
+
+       <div class="black">
+         <i class="fa-solid fa-phone-volume"></i>
+         <p style="margin-left: 12px;">+234(0)8145676307</p>
+       </div>
+
+       <div class="black">
+         <i class="fa-solid fa-envelope"></i>
+         <P style="margin-left: 10px;">leopeigecleaning@gmail.com</P>
+       </div>
+
+       <div class="black">
+        <i class="fa-sharp fa-regular fa-globe"></i>
+        <p style="margin-left: 13px;">www.leopeigecleaning.com</p>
+      </div>
+     </div>
+    
+     <div style="background-color: #F3F4F5; align-self:self-end" class="my">
+      <p style="text-align: center;" id="bell">copyright © 2022 Leopeige Cleaning All Right Reserved   <a href="https://www.privacypolicies.com/live/5dfe26c5-263d-40bc-aee5-e18df4cf6074">privacy policy</a></p>
+     </div>
+
+    </div>
+
+     </section4>
+
+ 
+   <script type=text/JavaScript>
+   window.addEventListener('scroll', reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i=0; i<reveals.length; i++){
+         var windowheight = window.innerHeight;
+         var revealtop = reveals[i].getBoundingClientRect().top;
+         var revealpoint = 150;
+
+         if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+         }
+         else{
+            reveals[i].classList.remove('active');
+         }
+      }
+    }
+   </script>
+
+   <script>
+    var navStatus=true
+    function menu(){
+     if(navStatus==true){
+       document.getElementById("nav-link").style.marginTop="0px";
+       document.getElementById("nav-link").style.borderBottomRightRadius="40%";
+       navStatus=false;  
+     }
+     else if(navStatus==false){
+         document.getElementById("nav-link").style.marginTop="-1200px";
+         document.getElementById("nav-link").style.borderBottomRightRadius="40%";
+         navStatus=true;
+     }
+    }
+ </script>
+
+ <script>
+   window.addEventListener("load", ()=> {
+      setTimeout(function(){
+         document.querySelector(".loader").classList.remove("loader-active");
+      },1000)
+   })
+
+   
+   function Load(){
+   const currentDate = new Date()
+   const year = currentDate.getFullYear()
+
+   document.getElementById("bell").innerHTML = `copyright © ${year} Leopeige Cleaning All Right Reserved <a href="https://www.privacypolicies.com/live/5dfe26c5-263d-40bc-aee5-e18df4cf6074">privacy policy</a>`
+}
+
+ </script>
+</body>
+</html>

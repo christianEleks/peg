@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-NI">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leopeige Cleaning">
+    <title>Book now</title>
+    <link rel="icon" type="image/x-icon" href="../Favicon/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+       }
+       .loader{
+      position: fixed;
+      top:0;
+      left:0;
+      width:100vw;
+      height:100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color:whitesmoke;
+      z-index: 9999999;
+     }
+     .loader-active{
+      display: flex;
+     }
+     .loader::after{
+      content:"";
+      width:70px;
+      height: 70px;
+      background:rgb(241, 147, 24);
+      animation: loader 0.5s infinite;
+      animation-direction: alternate;
+     }
+    
+     @keyframes loader{
+      from{
+         transform: translateY(-50px) scale(0.5);
+         border-radius: 50%;
+      }
+      to{
+         transform: translateY(50px) scale(1);
+         border-radius:0%;
+      }
+     }
+       input{
+        padding:20px;
+        margin: 15px;
+        border-radius: 7px;
+        border:2px solid rgb(241, 147, 24);
+       }
+       select{
+        padding:8px;
+        border-radius: 7px;
+        border:2px solid rgb(241, 147, 24);
+       }
+       select:focus{
+        border-color:rgb(22, 22, 243);
+       }
+       textarea{
+        margin: 15px;
+        border-radius: 7px;
+        border:2px solid rgb(241, 147, 24);
+        width:83%;
+       }
+       body ,html{
+        overflow-x: hidden;
+       }
+       body{
+        font-family: 'Poppins', sans-serif;
+       }
+       .box{
+        background:rgb(2, 2, 61);
+        background-position:center;
+        background-size:cover;
+        height:138vh;
+        width:100vw;
+        margin-top: -15px;
+        align-items: center;
+       }
+       .me{
+        width:40%
+       }
+       textarea:focus,
+       input:focus{
+        outline:none;
+        border-color:rgb(22, 22, 243) ;
+       }
+       .her:hover{
+        transform: scale(1.1);
+       }
+       @media only screen and (max-width:550px){
+        .box{
+            height:100%;
+        }
+        .me{
+            width:80%
+        }
+        textarea{
+            width:93%
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="loader loader-active"></div>
+
+   <div class="box">
+    <h2 style="color: rgb(241, 147, 24);margin: 15px;">Book Now</h2>
+    <form action="https://formspree.io/f/mlekgzjr" method="POST">
+     <div>
+        <input type="text" id="firstname" name="First name"  placeholder="First name" class="me"/>
+        <input type="text" id="lastname" name="Last name"  placeholder="Last name"  class="me"/>
+        <div>
+            <input type="email" id="email" name="Email" placeholder="Email"  class="me"/>
+            <input type="digits" id="phone" name="Phone Number"  placeholder="Phone Number"  class="me"/>
+        <div>
+            <div>
+               <input type="text" id="state" name="State" placeholder="State"  class="me"/>
+               <input type="text" id="city" name="City" placeholder="City"  class="me"/>
+            </div>
+            <div>
+                <input type="text" id="homeaddress" name="Home address" placeholder="Home address to be cleaned"  class="me"/>
+                <input type="text" id="landmark" name="Landmark" placeholder="Landmark"  class="me"/>
+            </div>
+            <div>
+                <h3 style="margin: 15px;color:rgb(241, 147, 24)">Select your gender</h3>
+                <input type="radio" id="male" name="Gender" value="male"/>
+                <label for="male" style="color:rgb(241, 147, 24)">male</label>
+                <input type="radio" id="female" name="Gender" value="female"/>
+                <label for="female" style="color:rgb(241, 147, 24)">female</label>
+            </div>
+            <div>
+                <label for="Type of cleaning" style="color:rgb(241, 147, 24);font-weight:bold;font-size: larger;margin: 15px;">Type of cleaning</label>
+                <select name="Type of cleaning">
+                <option>One-time cleaning</option>
+                <option>Office cleaning</option>
+                <option>Move in/out cleaning</option>
+                <option>Recurring cleaning</option>
+                </select>
+            </div>
+            <h3 style="margin: 15px;color:rgb(241, 147, 24)">Description of home/office to be cleaned</h3>
+            <textarea id="messageview" name="messageview" rows="6" cols="62" placeholder="messageview"> 
+                 
+            </textarea>
+        </div>
+        <div>
+                <input type="submit" value="Submit" style="border: none; color: white;background-color: rgb(241, 147, 24);padding:20px" class="her"/>
+            </div>
+        </div>  
+     </div>
+    </form>
+   </div>
+   
+   <script>
+    window.addEventListener("load", ()=> {
+       setTimeout(function(){
+          document.querySelector(".loader").classList.remove("loader-active");
+       },1000)
+    })
+  </script>
+</body>
+</html>
